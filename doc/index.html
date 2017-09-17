@@ -1,33 +1,405 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br, en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script src="js/bootstrap.min.js" ></script>
+    <script src="js/jquery.js" ></script>
 </head>
 <body>
-<h1>Tutorial</h1>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                Angular4
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown ">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Conta
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Opções</li>
+                        <li class=""><a href="#">Não disponível</a></li>
+                        <li class=""><a href="#">Não disponível</a></li>
+                        <li class=""><a href="#">Não disponível</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container-fluid main-container">
+    <div class="col-md-12 content">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Instalação
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12  topic-tittle">Repositorio do skeleton</div>
+                        <div class="col-lg-12 text-info">
+                            <a href="https://github.com/schoolofnetcom/iniciando-com-angular4" target="_blank">https://github.com/schoolofnetcom/iniciando-com-angular4</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12 topic-tittle">Instalando o angular</div>
+                        <div class="col-lg-12 fa fa-window-maximize"> npm -g ng2-install</div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12 topic-tittle">Instalando o webpackge de forma global</div>
+                        <div class="col-lg-12 fa fa-window-maximize"> npm install webpack-dev-server</div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12 topic-tittle">Iniciando o servidor</div>
+                        <div class="col-lg-12 fa fa-window-maximize"> npm start</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><!-- Pretaprando o terreno -->
+                Preparando o terreno
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12 fa fa-edit">Primeiro vamos alterar o conteudo do arquivo src/app/app.component.html para:</div>
+                        <pre style="color: #4F4F4F">
 
-<ul>
-    <li><h2>Repositorio do skeleton</h2></li>
-    <li><ul>
-            <li><span>https://github.com/schoolofnetcom/iniciando-com-angular4</span></li>
-        </ul>
-    </li>
-    <li><h2>Instalando o angular</h2></li>
-    <li><ul>
-            <li><span>npm -g ng2-install</span></li>
-        </ul>
-    </li>
-    <li><h2>Instalando o webpackge de forma global</h2></li>
-    <li><ul>
-            <li><span>npm install webpack-dev-server</span></li>
-        </ul>
-    </li>
-    <li><h2>Iniciando o servidor</h2></li>
-    <li><ul>
-            <li><span>npm start</span></li>
-        </ul>
-    </li>
-</ul>
+                            &lt;header id=&quot;header&quot;&gt;
+                            &lt;div class=&quot;navbar navbar-inverse navbar-static-top&quot;&gt;
+                            &lt;div class=&quot;container-fluid&quot;&gt;
+                            &lt;div class=&quot;navbar-header&quot;&gt;
+                            &lt;a href=&quot;/&quot; class=&quot;navbar-brand&quot;&gt;iStock&lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+                            &lt;li&gt;&lt;a [routerLink]=&quot;['/products']&quot;&gt;Produtos&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/stock-in&quot;&gt;Entrada de estoque&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=&quot;/stock-out&quot;&gt;Saída de estoque&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;h1 class=&quot;text-center&quot;&gt;Gerenciamento de estoque&lt;/h1&gt;
+
+                            &lt;/header&gt;
+                            &lt;main&gt;
+                            &lt;div class=&quot;container&quot;&gt;
+                            &lt;router-outlet&gt;&lt;/router-outlet&gt;
+                            &lt;/div&gt;
+                            &lt;/main&gt;
+
+                        </pre>
+
+                        <div class="col-lg-12 fa fa-edit">Em seguida vamos alterar o conteudo do arquivo <b>public/css/style.css para:</b></div>
+                        <pre style="color: #4F4F4F">
+                            body {
+                                font-family: 'Open Sans', sans-serif;
+                            }
+
+                            h1, h2, h3 {
+                                font-family: 'Droid Serif', serif;
+                                font-weight: bold;
+                            }
+
+                            #header {
+                                background: url("../images/background.jpg") no-repeat center top fixed;
+                                background-size: cover;
+                                background-color: #34495e;
+                                padding: 20px 40px 40px 40px;
+                                border-bottom: 1px solid #2c3e50;
+                            }
+
+                            #header h1 {
+                                padding-top: 20px;
+                                font-size: 44px;
+                            }
+
+                            .table tr td:last-child, .table tr th:last-child {
+                                text-align: right;
+                            }
+
+                            main {
+                                margin-top: 30px;
+                                display: block;
+                            }
+                        </pre>
+                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                        <div class="col-lg-12 fa fa-edit">E copiar a imagen abaixo para a pasta <b>public/images:</b></div>
+                            <img src="images/background.jpg" width="20%" alt="background">
+                        </p>
+
+                        <div class="col-lg-12 fa fa-edit">Editar também o arquivo <b>src/index.html</b></div>
+                        <pre style="color: #4F4F4F">
+                            &lt;!DOCTYPE html&gt;
+                            &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;base href=&quot;/&quot;&gt;
+                                &lt;title&gt;Angular With Webpack&lt;/title&gt;
+                                &lt;meta charset=&quot;UTF-8&quot;&gt;
+                                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+                                <b style="color: #000;: black;">&lt;link href=&quot;https://fonts.googleapis.com/css?family=Droid+Serif:700|Open+Sans:400,700&quot; rel=&quot;stylesheet&quot;&gt;</b>
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                                &lt;my-app&gt;Loading...&lt;/my-app&gt;
+                            &lt;/body&gt;
+                            &lt;/html&gt;
+                        </pre>
+
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-12 topic-tittle">Alterando o arquivo src/app/app.module.ts</div>
+                            <div class="col-lg-12 text-info">Será adicionado a importação do arquivo de rotas.</div>
+                            <pre style="color: #4F4F4F">
+                                import { NgModule } from '@angular/core';
+                                import { BrowserModule }  from '@angular/platform-browser';
+                                <b style="color: black">import { RouterModule, Routes } from '@angular/router';</b>
+                                import { AppComponent } from './app.component';
+
+                                import { ProductsModule } from '../products/products.module';
+
+                                <b style="color: black">const appRoutes: Routes = [
+                                    {path: '', redirectTo: '/products', pathMatch: 'full'}
+                                ];</b>
+
+                                @NgModule({
+                                  imports: [
+                                    BrowserModule,
+                                    <b style="color: black">RouterModule.forRoot(appRoutes)</b>
+                                  ],
+                                  declarations: [
+                                    AppComponent
+                                  ],
+                                  bootstrap: [ AppComponent ]
+                                })
+
+                                export class AppModule { }
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><!--Temas no angular4-->
+                Temas no Angular 4
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12 topic-tittle">Instalando Bootstrap</div>
+                        <div class="col-lg-12 fa-eye text-warning">npm install --save bootstrap</div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12 topic-tittle">Configurando o import do bootstrap no arquivo src/app/app.component.ts</div>
+                        <div class="col-lg-12 fa fa-edit">
+                        <pre style="color: #4F4F4F">
+                            import { Component } from '@angular/core';
+                            <b style="color: black">import 'bootstrap/dist/css/bootstrap.css';</b>
+                            import '../../public/css/styles.css';
+
+                            @Component({
+                              selector: 'my-app',
+                              templateUrl: './app.component.html',
+                              styleUrls: ['./app.component.css']
+                            })
+
+                            export class AppComponent { }
+
+                        </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12 topic-tittle">registrando o modulo em src/app/app.component.ts</div>
+                        <div class="col-lg-12 fa fa-edit">
+                            <pre>
+                            import { NgModule } from '@angular/core';
+                            import { BrowserModule }  from '@angular/platform-browser';
+                            import { RouterModule, Routes } from '@angular/router';
+                            import { AppComponent } from './app.component';
+
+                            const appRoutes: Routes = [ {path: '', redirectTo: '/products', pathMatch: 'full'} ];
+
+                            @NgModule({
+                              imports: [
+                                BrowserModule,
+                                  RouterModule.forRoot(appRoutes),
+                              ],
+                              declarations: [
+                                AppComponent
+                              ],
+                              bootstrap: [ AppComponent ]
+                            })
+
+                            export class AppModule { }
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 fa fa-edit">
+                        <img src="images/registrandomodulo.png" alt="RouterModule.forRoot(appRoutes)">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Primeiro módulo e primeiro componete
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12">Vamos criar um diretório em src chamado <b>products</b></div>
+                        <div class="col-lg-12">Dentro do diretório products criamos um arquivo chamado <b> products.module.ts </b></div>
+                        <div class="col-lg-12 fa fa-edit">
+                        <pre>
+                            import { NgModule } from '@angular/core';
+                            import { BrowserModule } from '@angular/platform-browser';
+
+                            @NgModule({
+                                imports: [BrowserModule]
+                            })
+                            export class ProducstModule{}
+                        </pre>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">E atualizar o arquivo <b> src/app/app.module.ts </b> passando o import do modulo criado e informado também no @NgModule:</div>
+                    <div class="col-lg-12 fa fa-edit">
+                        <pre>
+                            import { NgModule } from '@angular/core';
+                            import { BrowserModule }  from '@angular/platform-browser';
+                            import { RouterModule, Routes } from '@angular/router';
+                            import { AppComponent } from './app.component';
+                            <b style="color: black">import { ProductsModule } from '../products/products.module';</b>
+
+                            const appRoutes: Routes = [ {path: '', redirectTo: '/products', pathMatch: 'full'} ];
+
+                            @NgModule({
+                              imports: [
+                                BrowserModule,
+                                RouterModule.forRoot(appRoutes),
+                                <b style="color: black">ProductsModule</b>
+                              ],
+                              declarations: [
+                                AppComponent
+                              ],
+                              bootstrap: [ AppComponent ]
+                            })
+
+                            export class AppModule { }
+
+                        </pre>
+                    </div>
+                </div>
+                <div class="col-lg-12">Criando o componente: </b></div>
+                <div class="col-lg-12">Criamos no diretório <b>products</b> um arquivo chamado product.component.ts </b></div>
+                <div class="col-lg-12 fa fa-edit">
+                        <pre>
+                            import { Component } from '@angular/core';
+
+                            @Component ({ template: '&lt;h1&gt;Helo World&lt;/h1&gt;'})
+
+                            export class ProductsComponent{}
+
+                        </pre>
+                </div>
+                <div class="col-lg-12">E atualizar o arquivo <b> products.module.ts </b>
+                    passando o import do componente criado e informado também no @NgModule:
+                </div>
+                <div class="col-lg-12">Ficando assim:</div>
+                <div class="col-lg-12 fa fa-edit">
+                <pre>
+                    import { NgModule } from '@angular/core';
+                    import { BrowserModule } from '@angular/platform-browser';
+
+                    <b style="color: black">import { ProductsComponent } from './product.componet';</b>
+
+                    @NgModule({
+                        imports: [BrowserModule],
+                        declarations: [
+                            <b style="color: black">ProductsComponent</b>
+                        ]
+                    })
+
+                    export class ProductsModule{}
+                </pre>
+                </div>
+
+                <div class="col-lg-12">Ainda é necessário fazer uma atualização das rotas atualizando o arquivo <b>products.module.ts</b>
+                </div>
+                <div class="col-lg-12 fa fa-edit">
+                <pre>
+                    <font color="#4F4F4F">
+                    import { NgModule } from '@angular/core';
+                    import { BrowserModule }  from '@angular/platform-browser';
+                    <b style="color: black">import { RouterModule, Routes } from '@angular/router';</b>
+                    import { AppComponent } from './app.component';
+
+                    import { ProductsModule } from '../products/products.module';
+                    <b style="color: black">
+                    const appRoutes: Routes = [
+                        {path: '', redirectTo: '/products', pathMatch: 'full'}
+                    ];
+                    </b>
+
+                    @NgModule({
+                      imports: [
+                        BrowserModule,
+                        ProductsModule,
+                        <b style="color: black">RouterModule.forRoot(appRoutes)</b>
+                      ],
+                      declarations: [
+                        AppComponent
+                      ],
+                      bootstrap: [ AppComponent ]
+                    })
+
+                    export class AppModule { }
+                    </font>
+                </pre>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="pull-left footer">
+    <p class="col-md-12">
+    <hr class="divider">
+    Copyright &COPY; 2015 <a href="http://www.uira.com.br">Uirá Peixoto</a>
+    </p>
+</footer>
+</div>
+
+
 </body>
 </html>
